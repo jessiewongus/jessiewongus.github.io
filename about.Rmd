@@ -1,24 +1,23 @@
 
 ---
-title: "Resume"
+title: <center> <h1>**Resume**</h1> </center>
 output:
   html_document
 ---
 
+<ins> <h3>Education</h3> </ins>
 
-### Education
-
-**Columbia University, New York, NY : 2017 - 2019**
+**Columbia University, New York, NY : Sept 2017 - May 2019** 
 
 MPH Epidemiology, Certificate in Public Health Research Methods
 
 
-**UC Berkeley, Berkeley, CA : 2011 - 2015**
+**UC Berkeley, Berkeley, CA : Aug 2011 - Dec 2015**
 
 B.A. Public Health, Minor in Environmental Design & Urbanism
 
 
-### Work Experience
+<ins> <h3>Work Experience</h3> </ins>
 
 **UCSF, Division of HIV, Infectious Disease, and Global Medicine, San Francisco, CA : May 2018 – Aug 2018**
 
@@ -42,3 +41,11 @@ B.A. Public Health, Minor in Environmental Design & Urbanism
 *Administrative Data Assistant | Eastbay Collaborative for Underserved Children Program*
 
 - Data entry and audit of information from partner school sites, create forms/templates, organize archives, monitor compliance
+
+<ins> <h3>Skills and Courses</h3> </ins>
+
+**Volunteer Health Interpreters Organization Course (Fall 2014 – UC Berkeley)**: Cantonese proficiency in translating to patients in healthcare setting
+
+**Urban Politics: Policies for Sustainable Cities (Fall 2015 – Yonsei University, South Korea)**: Community-Based Learning Course: Evaluating Sustainability in Seoul Research Project: Housing & Energy in Bongwon Area
+
+**Computer Skills**: Microsoft Word, Excel, PowerPoint, STATA, SAS

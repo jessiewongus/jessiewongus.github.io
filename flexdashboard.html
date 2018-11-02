@@ -201,12 +201,6 @@ $(document).ready(function () {
      
   </a>
 </li>
-<li>
-  <a href="jessiewongus.html">
-    <span class=" Plotly"></span>
-     
-  </a>
-</li>
       </ul>
     </div><!--/.nav-collapse -->
   </div><!--/.container -->
@@ -225,6 +219,25 @@ $(document).ready(function () {
 <h2>Column</h2>
 <div id="chart-a" class="section level3">
 <h3>Chart A</h3>
+<pre class="r"><code>data(&quot;rest_inspec&quot;) 
+
+rest_inspec %&gt;%
+  group_by(cuisine_description) %&gt;%
+  summarize(mean_score = mean(score, na.rm = TRUE))</code></pre>
+<pre><code>## # A tibble: 85 x 2
+##    cuisine_description mean_score
+##    &lt;chr&gt;                    &lt;dbl&gt;
+##  1 Afghan                    18.4
+##  2 African                   21.9
+##  3 American                  18.1
+##  4 Armenian                  18.1
+##  5 Asian                     20.9
+##  6 Australian                17.4
+##  7 Bagels/Pretzels           18.5
+##  8 Bakery                    19.0
+##  9 Bangladeshi               22.7
+## 10 Barbecue                  19.0
+## # ... with 75 more rows</code></pre>
 </div>
 </div>
 <div id="column-1" class="section level2" data-width="350">

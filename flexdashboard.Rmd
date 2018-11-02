@@ -1,13 +1,18 @@
 ---
 title: "Instacart"
-output: 
+output:
   flexdashboard::flex_dashboard:
     orientation: columns
     vertical_layout: fill
 ---
 
+
 ```{r setup, include=FALSE}
+library(tidyverse)
+library(viridis)
 library(flexdashboard)
+library(plotly)
+library(p8105.datasets)
 ```
 
 Column {data-width=650}
@@ -16,6 +21,13 @@ Column {data-width=650}
 ### Chart A
 
 ```{r}
+data("rest_inspec") 
+
+rest_inspec %>%
+  group_by(cuisine_description) %>%
+  summarize(mean_score = mean(score, na.rm = TRUE))
+  
+
 
 ```
 
@@ -33,4 +45,3 @@ Column {data-width=350}
 ```{r}
 
 ```
-

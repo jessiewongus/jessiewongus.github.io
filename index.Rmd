@@ -1,16 +1,16 @@
 ---
-title: "Jessie Wong"
+title: <center> <h1>**Jessie Wong**</h1> </center>
 output:
   html_document:
-  toc: true
-  toc_float: true
+    toc: true
+    toc_float: true
 ---
 
-### Introduction
+<center><img src="images/photo1.jpg" style="width:75%"></center>
 
-<img src="images/photo1.jpg" style="width:75%">
+<center> <h3>Introduction</h3> </center>
+Hello my name is Jessie! I am currently a 2nd year MPH student at [Columbia University](https://www.mailman.columbia.edu/), with a concentration in Epidemiology and certificate in Public Health Research Methods. My public health interests are in global health, urban design, and social determinants of health. I attended [UC Berkeley](https://www.berkeley.edu/) for undergrad, where I completed a BA degree in Public Health and a minor in Environmental Design and Urbanism.
 
-Hello my name is Jessie! I am currently a 2nd year MPH student at Columbia University, with a concentration in Epidemiology and certificate in Public Health Research Methods. My public health interests are in global health, urban design, and social determinants of health.
+On this website you can find information about my academic and professional experience, as well as a flexdashboard with distinct plot types displaying information from a dataset called <ins>NY NOAA</ins>.
 
-### More Info
 
