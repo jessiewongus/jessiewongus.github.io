@@ -1,9 +1,10 @@
 ---
-title: "Holy cow!"
+title: "Jessie Wong"
 ---
 
-### I have a webpage!
 
-And I can put all kinds of stuff on it!
+### Introduction 
 
-rmarkdown::render_site()
+<img src="images/photo1.jpg" style="width:75%">
+
+Hello my name is Jessie! I am currently a 2nd year MPH student at Columbia University with a concentration in Epidemiology and certificate in Public Health Research Methods. My public health interest are in global health, urban design, and social determinants of health. 
