@@ -1,5 +1,5 @@
 ---
-title: "NY"
+title: "NOAA National Climatic Data on New York, 1980 - 2010"
 output:
   flexdashboard::flex_dashboard:
     orientation: columns
@@ -50,7 +50,7 @@ ny_noaa %>%
   
 ```
 
-### Chart C : Mean Snow Depth in New York, 1980 - 2010
+### Chart C : Mean Snow Depth in New York During November to January, 1980 - 2010
 
 ```{r}
 ny_noaa %>% 
@@ -59,7 +59,7 @@ ny_noaa %>%
   filter(month %in% c("11", "12", "01")) %>%
   group_by(year, month) %>%
   summarize(mean_snwd = mean(snwd, na.rm = TRUE)) %>%
-  plot_ly(x = ~year, y = ~mean_snwd, type = "scatter", mode = "marker") %>%
+  plot_ly(x = ~year, y = ~mean_snwd, type = "scatter", mode = "lines") %>%
   layout(xaxis = list(tickangle = 90, title = "Year"), 
          yaxis = list(title = "Mean Snow Depth (mm)"))
 ```
