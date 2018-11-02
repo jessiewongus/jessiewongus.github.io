@@ -1,5 +1,5 @@
 ---
-title: "Instacart"
+title: "NY"
 output:
   flexdashboard::flex_dashboard:
     orientation: columns
@@ -21,14 +21,46 @@ Column {data-width=650}
 ### Chart A
 
 ```{r}
-data("rest_inspec") 
-
-rest_inspec %>%
-  group_by(cuisine_description) %>%
-  summarize(mean_score = mean(score, na.rm = TRUE))
+data("ny_noaa") 
+ny_noaa %>% 
+  separate(date, into = c("year", "month", "day"), convert = TRUE) %>%
+  group_by(month) %>%
+  mutate(mean_prcp = prcp, na.rm = TRUE) %>%
+  ggplot(aes(x = month, y = mean_prcp, group = month)) +
+  geom_boxplot() +
+  theme_classic() +
+  theme(axis.text.x = element_text(angle = 90, hjust = 1))
   
+ View(ny_noaa) 
+  
+  
+  separate(date, into = c("year", "month", "day"), convert = TRUE) %>%
+  group_by(month, prcp) %>%
+  filter(month %in% c(8, 9, 10, 11, 12))
+  summarize(mean_prcp = mean(prcp, na.rm = TRUE)) %>%
+  plot_ly(x = ~id, y = ~sum_precip type = "bar")
+  
+data("ny_noaa") 
+ny_noaa %>% 
+  separate(date, into = c("year", "month", "day"), convert = TRUE) %>%
+  filter(id == US1NYAB0001) %>%
+  group_by(month) %>%
+  ggplot(aes(x = month, y = prcp, group = month)) +
+  geom_boxplot() +
+  theme_classic() +
+  theme(axis.text.x = element_text(angle = 90, hjust = 1))
 
+  geom_smooth(stat = 'smooth', color = 'Red', method = 'loess', formula = 'y ~ x') +
+  labs(title = "Mean Maximum Temperature from June to December at the Stations",
+    x = "Month",
+    y = "Mean Maximum Temperature") + 
+  theme(axis.text.x = element_text(hjust = 1)) +
+  viridis::scale_color_viridis(
+    name = "Station ID", 
+    discrete = TRUE)
 
+geom_point(alpha = .5) +
+  geom_smooth(stat = 'smooth', color = 'Red', method = 'loess', formula = 'y ~ x')
 ```
 
 Column {data-width=350}
@@ -37,7 +69,14 @@ Column {data-width=350}
 ### Chart B
 
 ```{r}
-
+ny_noaa %>% 
+  separate(date, into = c("year", "month", "day"), convert = TRUE) %>%
+  group_by(year) %>%
+  summarize(mean_prcp = mean(prcp, na.rm = TRUE)) %>%
+  plot_ly(x = ~year, y = ~mean_prcp, color = ~year, type = "bar") %>%
+  layout(xaxis = list(tickangle = 70, title = "Year"), 
+                      yaxis = list(title = "Mean Precipation (mm)"))
+  
 ```
 
 ### Chart C
