@@ -18,7 +18,7 @@ library(p8105.datasets)
 Column {data-width=650}
 -----------------------------------------------------------------------
 
-### Chart A
+### Chart A : Distribution of Mean Precipation in New York from January to December
 
 ```{r}
 ny_noaa %>%
@@ -36,10 +36,11 @@ ny_noaa %>%
 Column {data-width=350}
 -----------------------------------------------------------------------
 
-### Chart B
+### Chart B : Mean Snow in New York, 1980 - 2010
 
 ```{r}
-precp = ny_noaa %>% 
+ny_noaa %>% 
+  janitor::clean_names() %>%
   separate(date, into = c("year", "month", "day"), convert = TRUE) %>%
   group_by(year) %>%
   summarize(mean_snow = mean(snow, na.rm = TRUE)) %>%
@@ -49,8 +50,18 @@ precp = ny_noaa %>%
   
 ```
 
-### Chart C
+### Chart C : Mean Snow Depth in New York, 1980 - 2010
 
 ```{r}
-
+ny_noaa %>% 
+  janitor::clean_names() %>%
+  separate(date, into = c("year", "month", "day"), convert = TRUE) %>%
+  filter(month %in% c("11", "12", "01")) %>%
+  group_by(year, month) %>%
+  summarize(mean_snwd = mean(snwd, na.rm = TRUE)) %>%
+  plot_ly(x = ~year, y = ~mean_snwd, type = "scatter", mode = "marker") %>%
+  layout(xaxis = list(tickangle = 90, title = "Year"), 
+         yaxis = list(title = "Mean Snow Depth (mm)"))
 ```
+
+rmarkdown::render("flexdashboard.Rmd", output_format = "flex_dashboard")
