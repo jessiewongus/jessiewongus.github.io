@@ -2,9 +2,10 @@
 title: "Jessie Wong"
 ---
 
-
-### Introduction 
+### Introduction
 
 <img src="images/photo1.jpg" style="width:75%">
 
-Hello my name is Jessie! I am currently a 2nd year MPH student at Columbia University with a concentration in Epidemiology and certificate in Public Health Research Methods. My public health interest are in global health, urban design, and social determinants of health. 
+Hello my name is Jessie! I am currently a 2nd year MPH student at Columbia University with a concentration in Epidemiology and certificate in Public Health Research Methods. My public health interests are in global health, urban design, and social determinants of health.
+
+You can catch me on the weekends on the hunt for delicious food. My current food obsession are chicken & waffles and boba.
