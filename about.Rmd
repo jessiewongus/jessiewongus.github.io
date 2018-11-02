@@ -1,7 +1,8 @@
 
 ---
 title: "Resume"
-
+output:
+  html_document
 ---
 
 

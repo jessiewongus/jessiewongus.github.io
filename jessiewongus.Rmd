@@ -1,6 +1,19 @@
 ---
-title: "Homework 4"
-name: "Jessie Wong"
-date: '`r format(Sys.time(), "%Y-%m-%d")`'
-output: github_document
+title: "Instacart"
+output:
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
 ---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+```
+
+```{r}
+library(tidyverse)
+library(viridis)
+library(plotly)
+install.packages(plotly)
+```
+
