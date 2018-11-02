@@ -9,7 +9,6 @@ navbar:
       href: mailto:<jw3597@cumc.columbia.edu>
     - icon: fa-github fa-lg
       href: http://github.com/jessiewongus/
-    - text: "Plotly"
-      href: flexdashboard.html
+
 output:
   html_document 
